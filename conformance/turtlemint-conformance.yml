@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.turtlefin.com/docs
+standards:
+  - id: openapi-3.0
+    conforms: true
+    evidence: >-
+      Docs state "OneAPI has been created based on OpenAPI specifications 3.0
+      with the help of Swagger."
+  - id: rest
+    conforms: true
+    evidence: >-
+      Docs state the API "adheres to the principles of a REST architectural
+      style" with resource-oriented URLs and HTTP status codes for errors.
+  - id: bearer-token-auth
+    conforms: true
+    evidence: token-based Bearer Access Token in the Authorization header
+  - id: oauth2
+    conforms: false
+    evidence: token issuance is a proprietary key/secret -> access-token exchange, not OAuth2
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: errors are conveyed via HTTP status codes; no application/problem+json documented
+compliance_program:
+  published: false
+  note: no SOC 2 / ISO 27001 / PCI DSS certifications are published on the public site

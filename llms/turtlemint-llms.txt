@@ -1,0 +1,13 @@
+# oneapi Documentation
+
+> Documentation for oneapi
+
+## Guides
+- [Welcome](https://developers.turtlefin.com/docs/welcome.md)
+- [What is OneAPI ?](https://developers.turtlefin.com/docs/what-is-oneapi.md): APIs for Insurance Distribution
+- [Quickstart](https://developers.turtlefin.com/docs/quickstart.md): Developer Portal https://app.turtlefin.com/dev-portal/login
+- [Authentication](https://developers.turtlefin.com/docs/type.md): Access Token: token-based authentication
+- [Get started developing on OneAPI](https://developers.turtlefin.com/docs/get-started-developing-on-oneapi.md)
+- [Terms & Condition](https://developers.turtlefin.com/docs/terms-condition.md)
+- [AGREEMENT](https://developers.turtlefin.com/docs/license.md)
+- [Embedded Insurance](https://developers.turtlefin.com/docs/embedded-insurance.md)

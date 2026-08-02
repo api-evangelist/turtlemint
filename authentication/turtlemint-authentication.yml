@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.turtlefin.com/docs/type
+docs: https://developers.turtlefin.com/docs/type
+summary:
+  types: [http]
+  http_scheme: bearer
+  token_model: access-token
+  note: >-
+    Turtlefin OneAPI uses token-based authentication. Developers obtain an API
+    Key and Secret from the Apps section of the Developer Portal, then call the
+    Auth API to issue a short-lived Bearer Access Token (configurable TTL). The
+    token is passed in the Authorization header on every subsequent API call.
+schemes:
+  - name: AccessToken
+    type: http
+    scheme: bearer
+    in: header
+    header: Authorization
+    format: "Bearer <access_token>"
+    issued_via: Auth API (key + secret exchanged for a TTL-bound access token)
+    ttl: configurable per client
+    sources: [https://developers.turtlefin.com/docs/type]
+credentials:
+  - name: API Key & Secret
+    obtained_from: Developer Portal > Apps section (https://app.turtlefin.com/dev-portal/login)
+    used_as: username/password to Authorize in the API docs and to call the Auth API
+transport_security:
+  tls: required (SSL enabled; "Data Security on Transit")
+example_request: |
+  curl 'https://app.turtlefin.com/api/minterprise/v1/products/private-car/lookups/rto?search=mh01' \
+    --header 'Authorization: Bearer [YOUR_AUTH_INFO]' \
+    --header 'Accept: application/json'

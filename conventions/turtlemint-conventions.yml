@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.turtlefin.com/docs
+docs: https://developers.turtlefin.com/docs/welcome
+summary: >-
+  Cross-cutting request/response conventions for the Turtlefin OneAPI embedded
+  insurance platform, captured from the public developer documentation. The full
+  OpenAPI 3.0 (Swagger) reference and error section sit behind the Developer
+  Portal login, so field-level pagination and idempotency contracts are not
+  publicly documented and are left unasserted rather than fabricated.
+architecture:
+  style: REST
+  resource_oriented_urls: true
+  spec: OpenAPI 3.0 (Swagger)
+authentication:
+  style: bearer-access-token
+  header: Authorization
+  detail: conventions cross-link authentication/turtlemint-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  example_base: https://app.turtlefin.com/api/minterprise/v1
+  backward_compatibility: >-
+    APIs are versioned to provide backward compatibility; older versions are
+    deprecated over time and developers are advised to plan migrations to the
+    latest version.
+errors:
+  style: http-status-codes
+  detail: >-
+    HTTP response codes indicate errors; a dedicated Error section exists in the
+    portal docs (behind login) — not captured verbatim to avoid fabrication.
+rate_limiting:
+  documented: true
+  mechanisms: [rate-limiting, concurrency-control, spike-arrest, quota]
+  purpose: mitigate DDoS / malicious traffic and manage scale
+  headers: not publicly documented
+idempotency:
+  documented: false
+pagination:
+  documented: false

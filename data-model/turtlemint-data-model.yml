@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.turtlefin.com/docs/get-started-developing-on-oneapi
+docs: https://developers.turtlefin.com/docs/get-started-developing-on-oneapi
+note: >-
+  Entities and the purchase flow are derived from the publicly documented OneAPI
+  suite categories (Lookup/Masters, Quote, Proposal, Payment) and the sample
+  endpoint. The full OpenAPI schemas sit behind the Developer Portal login, so
+  field-level attributes and $ref graphs are not asserted here.
+entities:
+  - name: Product
+    description: An insurance product line (e.g. private-car, bike) exposed by OneAPI.
+    example_path: /api/minterprise/v1/products/private-car
+  - name: Lookup
+    aka: Masters
+    description: Master/reference data for a product (e.g. RTO, makes, models) used to build a journey.
+    example_path: /api/minterprise/v1/products/private-car/lookups/rto
+  - name: Quote
+    description: A priced insurance quote generated for a product using selected master data.
+  - name: Proposal
+    description: A proposal created from a selected quote, capturing customer/risk details.
+  - name: Payment
+    description: Payment against a proposal to issue the policy.
+relationships:
+  - from: Lookup
+    type: belongs_to
+    to: Product
+    via: product
+  - from: Quote
+    type: belongs_to
+    to: Product
+    via: product
+  - from: Proposal
+    type: belongs_to
+    to: Quote
+    via: quote
+  - from: Payment
+    type: belongs_to
+    to: Proposal
+    via: proposal
+flow:
+  - Lookup (masters) -> Quote -> Proposal -> Payment -> Policy issuance

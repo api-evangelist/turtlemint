@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: probed
+source: live probes of turtlefin hosts
+note: >-
+  No /.well-known/ discovery documents are published on any Turtlefin host. All
+  probes returned 404 (or 400 on the Wix-fronted marketing host). Recorded as a
+  negative result; no WellKnown scoring pointer is wired because no document
+  exists.
+hosts:
+  - host: https://app.turtlefin.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+  - host: https://developers.turtlefin.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+  - host: https://www.turtlefin.com
+    documents:
+      - {path: /.well-known/security.txt, status: 400}

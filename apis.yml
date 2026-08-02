@@ -1,8 +1,27 @@
 aid: turtlemint
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/turtlemint.png
 name: Turtlemint
-description: 'Turtlemint is a company surfaced as a portfolio company of ggv-capital and added to the
-  API Evangelist network as a stub for enrichment. Sector: insurtech. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Turtlemint is an Indian insurtech that sells and services insurance (health,
+  motor, life) and financial products to consumers and, through its advisor
+  platform TurtlemintPro, to a large network of point-of-sale agents. Its B2B
+  arm, Turtlefin, productizes that stack as embedded-insurance technology: the
+  OneAPI platform exposes REST APIs (OpenAPI 3.0 / Swagger) for lookups/master
+  data, quotes, proposals and payments so that banks, fintechs and e-commerce
+  partners can embed insurance purchase into their own journeys, alongside the
+  white-labeled DigitalCore platform and a sales-certification LMS.
 url: https://raw.githubusercontent.com/api-evangelist/turtlemint/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,16 +31,89 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Insurtech
-apis: []
+- Insurance
+- Embedded Insurance
+- Insurance Distribution
+- Fintech
+- API
+- Payments
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Turtlefin OneAPI
+  description: >-
+    REST APIs for embedded insurance distribution — lookups/master data, quotes,
+    proposals and payments — built to OpenAPI 3.0 (Swagger), secured with Bearer
+    access tokens, and testable in a sandbox "Developer Playground".
+  humanURL: https://developers.turtlefin.com/docs
+  baseURL: https://app.turtlefin.com/api/minterprise/v1
+  tags:
+  - Embedded Insurance
+  - Insurance
+  - REST
+  properties:
+  - type: Documentation
+    url: https://developers.turtlefin.com/docs
+  - type: APIReference
+    url: https://app.turtlefin.com/dev-portal/login
+  - type: GettingStarted
+    url: https://developers.turtlefin.com/docs/quickstart
+  - type: Authentication
+    url: authentication/turtlemint-authentication.yml
+  - type: Sandbox
+    url: sandbox/turtlemint-sandbox.yml
 common:
 - type: Website
   url: https://www.turtlemint.com/
+- type: DeveloperPortal
+  url: https://app.turtlefin.com/dev-portal/login
+- type: Documentation
+  url: https://developers.turtlefin.com/docs
+- type: APIReference
+  url: https://app.turtlefin.com/dev-portal/login
+- type: GettingStarted
+  url: https://developers.turtlefin.com/docs/quickstart
+- type: Login
+  url: https://app.turtlefin.com/dev-portal/login
+- type: Support
+  url: mailto:support@turtlefin.com
+- type: Blog
+  url: https://www.turtlefin.com/blog-post
+- type: TermsOfService
+  url: https://www.turtlefin.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.turtlefin.com/privacy-policy
+- type: Authentication
+  url: authentication/turtlemint-authentication.yml
+- type: Conventions
+  url: conventions/turtlemint-conventions.yml
+- type: Lifecycle
+  url: lifecycle/turtlemint-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/turtlemint-lifecycle.yml
+- type: Sandbox
+  url: sandbox/turtlemint-sandbox.yml
+- type: Components
+  url: components/turtlemint-components.yml
+- type: Conformance
+  url: conformance/turtlemint-conformance.yml
+- type: DataModel
+  url: data-model/turtlemint-data-model.yml
+- type: MCPServer
+  url: mcp/turtlemint-mcp.yml
+- type: LLMsTxt
+  url: llms/turtlemint-llms.txt
+- type: DomainSecurity
+  url: security/turtlemint-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1

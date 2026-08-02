@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.turtlefin.com/docs/what-is-oneapi
+docs: https://developers.turtlefin.com/docs/what-is-oneapi
+summary: >-
+  Turtlefin OneAPI ships readymade, plug-and-play client-side UI widgets so
+  integrators can assemble insurance-distribution workflows without building the
+  interface from scratch. The widgets are authored in vanilla JavaScript, making
+  them compatible with any JS framework (Angular, React, etc.), and are copied
+  from the portal to the integrator's clipboard/codebase.
+families:
+  - name: Workflow UI Widgets
+    technology: vanilla JavaScript (framework-agnostic)
+    delivery: copy-to-clipboard plug-and-play snippets from the Developer Portal
+    components:
+      - name: Master Data Search widget
+        purpose: search insurance master/lookup data (e.g. RTO, makes, models)
+      - name: Quote widget
+        purpose: generate insurance quotes
+      - name: Proposal widget
+        purpose: create proposals from a selected quote
+    docs: https://developers.turtlefin.com/docs/what-is-oneapi

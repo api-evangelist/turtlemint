@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.turtlefin.com/docs/what-is-oneapi
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://developers.turtlefin.com/docs/what-is-oneapi
+  detail: >-
+    APIs are versioned to provide backward compatibility; different
+    schemas/contracts are maintained for old and new features.
+deprecation:
+  policy_stated: true
+  policy_url: https://developers.turtlefin.com/docs/what-is-oneapi
+  sunset_header: unknown
+  detail: >-
+    Old API versions are deprecated over time; developers are advised to create
+    migration plans to keep using the latest version and its new features.
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    Docs reference auto-scaling behind an API gateway, real-time success/error
+    dashboards, and a Pay-As-You-Go quota model, but publish no formal SLA.
+status_page: null
+deprecated_operations: []
