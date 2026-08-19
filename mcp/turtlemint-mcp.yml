@@ -3,13 +3,10 @@ method: searched
 status: published
 source: https://www.turtlefin.com/llms.txt
 scope: marketing-site
-note: >-
-  This is the generic Wix Site MCP endpoint auto-exposed for the turtlefin.com
-  marketing site (business details, site search, site-API calls) — NOT a
-  first-party MCP server for the OneAPI insurance-distribution product. Captured
-  because it is a real, publicly reachable hosted MCP endpoint. No product MCP
-  server for OneAPI was found; the OneAPI surface is a REST API behind the
-  Developer Portal.
+note: This is the generic Wix Site MCP endpoint auto-exposed for the turtlefin.com marketing site (business
+  details, site search, site-API calls) — NOT a first-party MCP server for the OneAPI insurance-distribution
+  product. Captured because it is a real, publicly reachable hosted MCP endpoint. No product MCP server
+  for OneAPI was found; the OneAPI surface is a REST API behind the Developer Portal.
 server:
   name: turtlefin-site
   provider: Wix Site MCP
@@ -18,17 +15,25 @@ server:
   auth: none (public site content only)
   docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
 tools:
-  - name: GetBusinessDetails
-    description: Retrieve business/site details (timezone, email, phone, address).
-  - name: SearchInSite
-    description: Search the site for information.
-  - name: SearchSiteApiDocs
-    description: Retrieve API docs for Wix business solutions installed on the site.
-  - name: GenerateVisitorToken
-    description: Create a visitor session and obtain a visitor access token.
-  - name: CallWixSiteAPI
-    description: Call site API methods on a visitor's behalf.
-  - name: ReadFullDocsArticle
-    description: Fetch a full article from the Wix developer docs portal.
-  - name: ReadFullDocsMethodSchema
-    description: Fetch the full schema for a Wix API method.
+- name: GetBusinessDetails
+  description: Retrieve business/site details (timezone, email, phone, address).
+- name: SearchInSite
+  description: Search the site for information.
+- name: SearchSiteApiDocs
+  description: Retrieve API docs for Wix business solutions installed on the site.
+- name: GenerateVisitorToken
+  description: Create a visitor session and obtain a visitor access token.
+- name: CallWixSiteAPI
+  description: Call site API methods on a visitor's behalf.
+- name: ReadFullDocsArticle
+  description: Fetch a full article from the Wix developer docs portal.
+- name: ReadFullDocsMethodSchema
+  description: Fetch the full schema for a Wix API method.
+deployment:
+  mode: remote
+  endpoint: https://www.turtlefin.com/_api/mcp
+  verified: probed
+  probe: live
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
